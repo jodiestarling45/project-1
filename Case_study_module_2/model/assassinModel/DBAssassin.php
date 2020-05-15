@@ -34,5 +34,8 @@ class DBAssassin
         $stmt = $this->connection->query($sql);
         return $stmt->fetchAll();
     }
+    public function hire(){
+
+    }
 
 }

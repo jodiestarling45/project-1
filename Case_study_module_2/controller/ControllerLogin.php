@@ -24,7 +24,7 @@ class ControllerLogin
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result = $this->DBConnectionLogin->checkLogin($_POST['email']);
             if ($result) {
-                header('location: index.php');
+                header('location: index_3.php');
             } else {
                 $message = "wrong password or account";
                 header('location: index_1.php');

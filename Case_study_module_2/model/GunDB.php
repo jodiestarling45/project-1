@@ -1,6 +1,6 @@
 <?php
 
-namespace model;
+namespace Model;
 
 class GunDB
 {
@@ -13,76 +13,70 @@ class GunDB
 
     public function create($gun)
     {
-        $sql = "  INSERT INTO guns(name, series, branch, origin, price, status, type_id, size_bullet_id) VALUES ('$gun->name','$gun->series','$gun->branch','$gun->origin','$gun->price','$gun->status','$gun->type_id','$gun->size_bullet_id')";
-        /*$statement = $this->connection->prepare($sql);
+        $sql = "INSERT INTO gun (name, series, brand, content, origin, price, status, type_id) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        $statement = $this->connection->prepare($sql);
         $statement->bindParam(1, $gun->name);
         $statement->bindParam(2, $gun->series);
-        $statement->bindParam(3, $gun->branch);
+        $statement->bindParam(3, $gun->brand);
         $statement->bindParam(4, $gun->content);
         $statement->bindParam(5, $gun->origin);
         $statement->bindParam(6, $gun->price);
         $statement->bindParam(7, $gun->status);
         $statement->bindParam(8, $gun->type_id);
-        $statement->bindParam(9, $gun->size_bullet_id);
-        $statement->execute();*/
-        $this->connection->exec($sql);
-
-
+        $statement->execute();
     }
 
     public function getAll()
     {
-        $sql = "SELECT * FROM guns";
-        /*$statement = $this->connection->prepare($sql);
+        $sql = "SELECT gun.id, gun.name, gun.series, gun.brand, gun.content, gun.origin, gun.price, gun.status, 
+                type.name AS 'type_name' FROM gun JOIN type ON gun.type_id = type.id ";
+        $statement = $this->connection->prepare($sql);
         $statement->execute();
         $result = $statement->fetchAll();
         $guns = [];
         foreach ($result as $row) {
-            $gun = new Gun($row['name'], $row['series'], $row['branch'], $row['content'], $row['origin'], $row['price'],
-                $row['status'], $row['type_id'], $row['size_bullet_id']);
+            $gun = new Gun($row['name'], $row['series'], $row['brand'], $row['content'], $row['origin'], $row['price'], $row['status'], $row['type_name']);
             $gun->id = $row['id'];
             $guns[] = $gun;
         }
-        return $guns;*/
-        $stmt =$this->connection->query($sql);
-        return $stmt->fetchAll();
+        return $guns;
     }
 
     public function get($id)
     {
-        $sql = "SELECT * FROM guns WHERE id = $id";
-        /*$statement = $this->connection->prepare($sql);
+        $sql = "SELECT gun.id, gun.name, gun.series, gun.brand, gun.content, gun.origin, gun.price, gun.status, 
+                type.name AS 'type_name' FROM gun JOIN type ON gun.type_id = type.id WHERE gun.id = ?";
+        $statement = $this->connection->prepare($sql);
         $statement->bindParam(1, $id);
         $statement->execute();
         $row = $statement->fetch();
-        $gun = new Gun($row['name'], $row['series'], $row['branch'], $row['content'], $row['origin'], $row['price'],
-            $row['status'], $row['type_id'], $row['size_bullet_id']);
+        $gun = new Gun($row['name'], $row['series'], $row['brand'], $row['content'], $row['origin'], $row['price'], $row['status'], $row['type_name']);
         $gun->id = $row['id'];
-        return $gun;*/
-        $stmt = $this->connection->query($sql);
-        return $stmt->fetchAll();
+        return $gun;
     }
 
     public function delete($id)
     {
-        $sql = "DELETE FROM guns WHERE id = $id";
-        /*$statement = $this->connection->prepare($sql);
+        $sql = "DELETE FROM gun WHERE id = ?";
+        $statement = $this->connection->prepare($sql);
         $statement->bindParam(1, $id);
-        $statement->execute();*/
-        $this->connection->exec($sql);
+        return $statement->execute();
     }
 
     public function update($id, $gun)
     {
-        $sql = "UPDATE gun SET name = '$gun->name', series = '$gun->series', branch = '$gun->branch',origin = '$gun->origin', price = '$gun->price', status = '$gun->status', type_id = '$gun->type_id', size_bullet_id = '$gun->size_bullet_id' WHERE id = $id";
-        $this->connection->exec($sql);
-    }
-
-    public function search($key)
-    {
-        $sql = "SELECT * FROM `guns` WHERE name like '%$key%' or size_bullet_id like '%$key%' or price like '%$key%'";
-        $stmt = $this->connection->query($sql);
-        $result = $stmt->fetchAll();
-        return $result;
+        $sql = "UPDATE gun SET name = ?, series = ?, brand = ?, content = ?, origin = ?, price = ?, status = ?, type_id = ? WHERE id = ?";
+        $statement = $this->connection->prepare($sql);
+        $statement->bindParam(1, $gun->name);
+        $statement->bindParam(2, $gun->series);
+        $statement->bindParam(3, $gun->brand);
+        $statement->bindParam(4, $gun->content);
+        $statement->bindParam(5, $gun->origin);
+        $statement->bindParam(6, $gun->price);
+        $statement->bindParam(7, $gun->status);
+        $statement->bindParam(8, $gun->type_id);
+        $statement->bindParam(9, $id);
+        return $statement->execute();
     }
 }
