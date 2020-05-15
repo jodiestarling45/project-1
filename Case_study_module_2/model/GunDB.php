@@ -51,7 +51,7 @@ class GunDB
         $statement->bindParam(1, $id);
         $statement->execute();
         $row = $statement->fetch();
-        $gun = new Gun($row['name'], $row['series'], $row['brand'], $row['content'], $row['origin'], $row['price'], $row['status'], $row['type_name']);
+         $gun = new Gun($row['name'], $row['series'], $row['brand'], $row['content'], $row['origin'], $row['price'], $row['status'], $row['type_name']);
         $gun->id = $row['id'];
         return $gun;
     }

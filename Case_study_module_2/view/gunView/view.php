@@ -4,7 +4,7 @@
     }
 </style>
 <p>
-    <a href="index.php" class="btn btn-default">Return</a>
+    <a href="index_3.php" class="btn btn-default">Return</a>
 </p>
 <h1 style="color: red"><?php echo $gun->name; ?></h1>
 <hr>

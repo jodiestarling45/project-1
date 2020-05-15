@@ -32,6 +32,7 @@ class GunController
             $gun = new Gun($name, $series, $brand, $content, $origin, $price, $status, $type_id);
             $this->gunDB->create($gun);
             $message = "Created a gun";
+            header('location: index_3.php');
             include "view/gunView/add.php";
         }
     }

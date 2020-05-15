@@ -4,7 +4,7 @@
     }
 </style>
 <h2 style="color:green;">List guns</h2>
-<a href="./index.php?page=add">Create new guns</a>
+<a href="./index_3.php?page=add">Create new guns</a>
 <table class="table">
     <thead>
     <tr>
@@ -28,7 +28,7 @@
         <td><?php echo $gun->name ?></td>
         <td><?php echo $gun->series ?></td>
         <td><?php echo $gun->brand ?></td>
-        <td><a href="./index.php_3?page=view&id=<?php echo $gun->id; ?>" class="btn btn-sm">Data details</td>
+        <td><a href="./index_3.php?page=view&id=<?php echo $gun->id; ?>" class="btn btn-sm">Data details</td>
         <td><?php echo $gun->origin ?></td>
         <td><?php echo $gun->price ?></td>
         <td><?php echo $gun->status ?></td>
