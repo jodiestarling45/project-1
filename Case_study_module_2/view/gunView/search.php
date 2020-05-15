@@ -153,14 +153,14 @@
             <td><?php echo $gun['name']?></td>
             <td><?php echo $gun['series'] ?></td>
             <td><?php echo $gun['brand'] ?></td>
-            <td> <a href="./index_3.php?page=view&id=<?php echo $gun->id; ?>" class="btn btn-sm"><button type="button" class="btn btn-light">delail</button></a></td>
+            <td> <a href="./index_3.php?page=view&id=<?php echo $gun['id']; ?>" class="btn btn-sm"><button type="button" class="btn btn-light">delail</button></a></td>
 
             <td><?php echo $gun['origin'] ?></td>
             <td><?php echo $gun['price'] ?></td>
             <td><?php echo $gun['status'] ?></td>
             <td><?php echo $gun['type_id'] ?></td>
-            <td> <a href="./index_3.php?page=delete&id=<?php echo $gun->id; ?>" class="btn btn-sm"><button type="button" class="btn btn-light">delete</button></a></td>
-            <td> <a href="./index_3.php?page=edit&id=<?php echo $gun->id; ?>" class="btn btn-sm"><button type="button" class="btn btn-light">update</button></a></td>
+            <td> <a href="./index_3.php?page=delete&id=<?php echo $gun['id']; ?>" class="btn btn-sm"><button type="button" class="btn btn-light">delete</button></a></td>
+            <td> <a href="./index_3.php?page=edit&id=<?php echo $gun['id']; ?>" class="btn btn-sm"><button type="button" class="btn btn-light">update</button></a></td>
             <?php endforeach; ?>
         </tbody>
     </table>

@@ -55,7 +55,7 @@ class GunController
         if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             $id = $_GET['id'];
             $gun = $this->gunDB->get($id);
-            include "view/gunView/delete.php";
+
         } else {
             $id = $_POST['id'];
             $this->gunDB->delete($id);

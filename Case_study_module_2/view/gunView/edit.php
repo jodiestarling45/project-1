@@ -10,6 +10,10 @@
         <textarea name="series" class="form-control"><?php echo $gun->series; ?></textarea>
     </div>
     <div class="form-group">
+        <label>content</label>
+        <textarea name="series" class="form-control"><?php echo $gun->content; ?></textarea>
+    </div>
+    <div class="form-group">
         <label>Brand</label>
         <textarea name="brand" class="form-control"><?php echo $gun->brand; ?></textarea>
     </div>
