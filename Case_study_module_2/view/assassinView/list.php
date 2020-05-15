@@ -636,7 +636,7 @@
                 <tr>
                     <td><?php echo $key?></td>
                     <td><?php echo $person['name']?></td>
-                    <td><img src="<?php echo $person['image']?>" alt=""></td>
+                    <td><img src="images/<?php echo $person['image']?>" alt=""></td>
                     <td><?php echo $person['text']?></td>
                     <td><?php echo $person['price']?></td>
                     <td>
@@ -650,20 +650,7 @@
 
     </div>
     <div class="footer">
-        <div class="footer">
-
-            <p>Author: Hege Refsnes<br>
-                <a href="mailto:hege@example.com">hege@example.com</a></p>
-            <p class="footer-company-about">
-                <span>About the company</span>
-                We offer training and skill building courses across Technology, Design, Management, Science and Humanities.</p>
-            <div class="footer-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-instagram"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-youtube"></i></a>
-            </div>
+        
     </div>
 </div>
 </body>
