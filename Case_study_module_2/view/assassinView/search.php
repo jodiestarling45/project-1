@@ -21,7 +21,7 @@
     }
 </style>
 <ul>
-    <li><a href="index.php">home</a></li>
+    <li><a href="index_3.php">home</a></li>
     <li><a href="index_2.php?page=add">add new assassin</a></li>
     <li><a href="index_2.php?page=search">search</a></li>
     <li><a href="#about">About</a></li>

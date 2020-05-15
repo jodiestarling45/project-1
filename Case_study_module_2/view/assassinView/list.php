@@ -122,22 +122,23 @@
                     <a class="navbar-brand" href="#">WebSiteName</a>
                 </div>
                 <ul class="nav navbar-nav">
-                    <li><a href="index.php">home</a></li>
-                    <li><a href="index.php?page=add">add new</a></li>
+                    <li><a href="index_3.php">home</a></li>
+                    <li><a href="index_3.php?page=add">add new</a></li>
                     <li><a href="./index_2.php?page=">hire assassin</a></li>
-                    <li><a href="index.php">home</a></li>
+                    <li><a href="index_3.php">home</a></li>
                     <li><a href="index_2.php?page=add">add new assassin</a></li>
                     <li><a href="index_2.php?page=search">search</a></li>
+                    <li><a href="index.php?page=search">search</a></li>
                 </ul>
             </div>
         </nav>
     </div>
-    <div class="right">
-        <a href="index.php?page=search">search</a>
 
-    </div>
+
+
+
     <div class="left">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="800px" height="800px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="1000px" height="300px" frameborder="2" style="border:0" allowfullscreen></iframe>
         <table>
             <tr>
                 <th>num</th>

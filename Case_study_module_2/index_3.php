@@ -29,7 +29,9 @@ switch ($page) {
     case 'edit':
         $controller->edit();
         break;
-
+    case 'search':
+        $controller->search();
+        break;
     case 'view':
         $controller->view();
         break;

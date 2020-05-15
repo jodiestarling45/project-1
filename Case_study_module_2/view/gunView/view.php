@@ -1,10 +1,10 @@
 <style>
     body {
-        background-color: burlywood;
+
     }
 </style>
 <p>
-    <a href="index_3.php" class="btn btn-default">Return</a>
+
 </p>
 <h1 style="color: red"><?php echo $gun->name; ?></h1>
 <hr>
@@ -21,3 +21,8 @@
 <td>Status: <?php echo $gun->status ?></td>
 <hr>
 <p style="color:orangered">Type: <?php echo $gun->type_id; ?></p>
+<a href="index_3.php" class="btn btn-default"><button type="button" class="btn btn-dark">back</button></a>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>

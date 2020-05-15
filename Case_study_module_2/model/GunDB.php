@@ -79,4 +79,9 @@ class GunDB
         $statement->bindParam(9, $id);
         return $statement->execute();
     }
+    public function search ($key){
+        $sql = "SELECT * FROM `gun` WHERE name LIKE '%$key%'";
+        $stmt = $this->connection->query($sql);
+        return $stmt->fetchAll();
+    }
 }

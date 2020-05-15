@@ -76,4 +76,11 @@ class GunController
             header('Location: index_3.php');
         }
     }
+    public function search(){
+        if ($_SERVER['REQUEST_METHOD']=="POST"){
+            $key = $_POST['key'];
+            $guns = $this->gunDB->search($key);
+        }
+        include 'view/gunView/search.php';
+    }
 }
